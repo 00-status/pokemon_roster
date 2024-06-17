@@ -1,22 +1,22 @@
 import { useState } from "react";
 import { PokemonInventory } from "./PokemonInventory";
 import { PokemonRoster } from "./PokemonRoster";
+import { fetchPokemonHook } from "../fetchPokemonHook";
 
 export const PokemonHub = () => {
     const [rosterPokemons, setRosterPokemons] = useState<string[]>([]);
-    // Call API hook.
+    const pokemons = fetchPokemonHook();
+
+    // Call pokemon API hook to get roster.
 
     const addToRoster = (pokemon: string) => {
-        // Clone the rosterPokemons array
-        // If the array is at 6 already
-        //      don't do anything
-        // else
-        //      add the pokemon to the clone
-        // set the rosterPokemons to the clone
+        if (rosterPokemons.length < 6) {
+            setRosterPokemons((currentState) => [...currentState, pokemon]);
+        }
     };
     
     return <div>
         <PokemonRoster rosterPokemons={rosterPokemons} />
-        <PokemonInventory pokemons={[]} addToRoster={addToRoster} />
+        <PokemonInventory pokemons={pokemons} addToRoster={addToRoster} />
     </div>;
 };

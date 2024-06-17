@@ -4,5 +4,7 @@ type Props = {
 };
 
 export const PokemonRoster = (props: Props) => {
-    return <div>Roster</div>;
+    return <div>
+        {props.rosterPokemons.map((pokemon) => <div key={pokemon}>{pokemon}</div>)}
+    </div>;
 };

@@ -1,0 +1,6 @@
+
+.pokemon-hub__inventory {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}

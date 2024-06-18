@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
 import { PokemonHub } from './components/PokemonHub';
 
 const rootDomNode = document.getElementById('app');

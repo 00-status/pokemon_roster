@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-export type Pokemon = {
+export type BasicPokemon = {
     name: string,
     url: string
 };
 
-export const fetchPokemonHook = (): Pokemon[] => {
-    const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+export const fetchPokemonHook = (): BasicPokemon[] => {
+    const [pokemons, setPokemons] = useState<BasicPokemon[]>([]);
 
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon')

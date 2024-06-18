@@ -4,10 +4,12 @@ import './pokemon-hub.css';
 import { PokemonInventory } from "./PokemonInventory";
 import { PokemonRoster } from "./PokemonRoster";
 import { fetchPokemonHook } from "../fetchPokemonHook";
+import { fetchDetailedPokemonHook } from "../fetchDetailedPokemonHook";
 
 export const PokemonHub = () => {
     const [rosterPokemons, setRosterPokemons] = useState<string[]>([]);
-    const pokemons = fetchPokemonHook();
+
+    const pokemons = fetchDetailedPokemonHook();
 
     const addToRoster = (pokemon: string) => {
         if (rosterPokemons.length < 6) {
@@ -26,10 +28,6 @@ export const PokemonHub = () => {
 
         setRosterPokemons(rosterPokemonsClone);
     };
-
-    // Removing pokemon from the roster
-    // fetching inventory details
-    // Fetch secific pokemon details
     
     return <div>
         <div className="pokemon-hub__inventory">

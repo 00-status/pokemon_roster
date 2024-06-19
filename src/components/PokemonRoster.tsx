@@ -11,6 +11,7 @@ export const PokemonRoster = (props: Props) => {
 
     return <div>
         <h2>Roster</h2>
-        {rosterPokemons.map((pokemon) => <RosterItem pokemon={pokemon} onClick={removeFromRoster} />)}
+        {rosterPokemons.map((pokemon) =>
+            <RosterItem key={pokemon.name} pokemon={pokemon} onClick={removeFromRoster} />)}
     </div>;
 };

@@ -1,4 +1,5 @@
 import { Pokemon } from "../fetchDetailedPokemonHook";
+import { RosterItem } from "./RosterItem";
 
 type Props = {
     rosterPokemons: Pokemon[];
@@ -6,9 +7,10 @@ type Props = {
 };
 
 export const PokemonRoster = (props: Props) => {
+    const {rosterPokemons, removeFromRoster} = props;
+
     return <div>
         <h2>Roster</h2>
-        {props.rosterPokemons.map((pokemon) =>
-            <div key={pokemon.name}> <img src={pokemon.sprite} alt={pokemon.name} /> {pokemon.name} <button onClick={() => props.removeFromRoster(pokemon.name)}>Remove</button></div>)}
+        {rosterPokemons.map((pokemon) => <RosterItem pokemon={pokemon} onClick={removeFromRoster} />)}
     </div>;
 };

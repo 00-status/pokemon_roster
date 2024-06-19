@@ -1,0 +1,13 @@
+
+.roster-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.roster-item__image {
+    width: 100px;
+}
+
+.roster-item__label {
+    align-self: center;
+}

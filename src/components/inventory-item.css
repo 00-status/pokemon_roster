@@ -1,0 +1,13 @@
+
+.inventory-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.inventory-item__image {
+    width: 100px;
+}
+
+.inventory-item__label {
+    align-self: center;
+}

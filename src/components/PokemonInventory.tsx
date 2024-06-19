@@ -1,19 +1,18 @@
 import { Pokemon } from "../fetchDetailedPokemonHook";
+import { InventoryItem } from "./InventoryItem";
 
 type Props = {
     pokemons: Pokemon[];
     addToRoster: (pokemon: Pokemon) => void;
 };
 
-// TODO: Create an InventoryItem to help with readability
 export const PokemonInventory = (props: Props) => {
+    const {pokemons, addToRoster} = props;
+
     return <div>
         <h2>Inventory</h2>
         <ul>
-            {props.pokemons.map(
-                (pokemon) => <div key={pokemon.name}>
-                        <img src={pokemon.sprite} alt={pokemon.name} /> {pokemon.name} <button onClick={() => props.addToRoster(pokemon)}>Add</button>
-                    </div>)}
+            {pokemons.map((pokemon) => <InventoryItem pokemon={pokemon} onClick={addToRoster} />)}
         </ul>
     </div>;
 };

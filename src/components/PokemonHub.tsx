@@ -3,24 +3,23 @@ import { useState } from "react";
 import './pokemon-hub.css';
 import { PokemonInventory } from "./PokemonInventory";
 import { PokemonRoster } from "./PokemonRoster";
-import { fetchPokemonHook } from "../fetchPokemonHook";
-import { fetchDetailedPokemonHook } from "../fetchDetailedPokemonHook";
+import { Pokemon, fetchDetailedPokemonHook } from "../fetchDetailedPokemonHook";
 
 export const PokemonHub = () => {
-    const [rosterPokemons, setRosterPokemons] = useState<string[]>([]);
+    const [rosterPokemons, setRosterPokemons] = useState<Pokemon[]>([]);
 
     const pokemons = fetchDetailedPokemonHook();
 
-    const addToRoster = (pokemon: string) => {
+    const addToRoster = (pokemon: Pokemon) => {
         if (rosterPokemons.length < 6) {
             setRosterPokemons((currentState) => [...currentState, pokemon]);
         }
     };
 
-    const removeFromRoster = (pokemon: string) => {
+    const removeFromRoster = (pokemonName: string) => {
         const rosterPokemonsClone = [...rosterPokemons];
 
-        const indexToRemove = rosterPokemonsClone.indexOf(pokemon);
+        const indexToRemove = rosterPokemonsClone.findIndex((pokemon) => pokemon.name === pokemonName);
 
         if (indexToRemove >= 0) {
             rosterPokemonsClone.splice(indexToRemove, 1);

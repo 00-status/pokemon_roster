@@ -16,13 +16,5 @@ const router = createBrowserRouter([
     }
 ]);
 
-// Pokemon:
-//      Fetches Pokemon from the PokemonAPI.
-//      PokemonInventory
-//          Takes in and displays a list of Pokemon.
-//          Clicking on a pokemon in the inventory adds it to the Roster.
-//      Roster holds all pokemon currently selected from the Inventory.
-//          Clicking on a pokemon in the roster will make details appear at the bottom of the page.
-
 const root = createRoot(rootDomNode);
 root.render(<RouterProvider router={router}/>);

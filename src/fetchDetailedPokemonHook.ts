@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 
 import { fetchPokemonHook } from "./fetchPokemonHook";
+import { APIPokemon } from "./apiTypes";
 
 export type Pokemon = {
     name: string;
+    height: number;
     weight: number;
     sprite: string;
+    types: string[];
 };
 
 export const fetchDetailedPokemonHook = (): Pokemon[] => {
@@ -16,11 +19,15 @@ export const fetchDetailedPokemonHook = (): Pokemon[] => {
     useEffect(() => {
         const promises = basicPokemon.map(pokemon => makeAPICall(pokemon.url));
         Promise.all(promises).then((responses) => {
-                const mappedPokemon = responses.map((detailedPokemon) => {
+                const mappedPokemon = responses.map((detailedPokemon: APIPokemon) => {
+                    const types = detailedPokemon.types.map(type => type.type.name);
+
                     return {
                         name: detailedPokemon.name,
+                        height: detailedPokemon.height,
                         weight: detailedPokemon.weight,
-                        sprite: detailedPokemon.sprites.front_default
+                        sprite: detailedPokemon.sprites.front_default,
+                        types: types
                     };
                 });
 
@@ -30,14 +37,6 @@ export const fetchDetailedPokemonHook = (): Pokemon[] => {
     }, [basicPokemon, makeAPICall]);
 
     return pokemons;
-
-    // In PokemonHub:
-    //      Fetch basic pokemon
-    //      Create a list of URLs based on the basicPokemon
-    //      queue up a bunch of requests with fetchAll
-    //          Wait for the promises to finish
-    //      map the detailed pokemon
-    //      Return the detailed pokemon
 };
 
 async function makeAPICall(endpoint: string) {

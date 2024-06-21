@@ -27,6 +27,15 @@ export const PokemonHub = () => {
 
         setRosterPokemons(rosterPokemonsClone);
     };
+
+    // TODO:
+    //      Details section: Display height, weight, name, types, abilities
+    //      Fetch Pokemon by generation
+    //      Styling
+    //          align Roster and inventory heights
+    //          Hide overflow of inventory
+    //          Change button to be onClick and hover
+    //          Align titles
     
     return <div>
         <div className="pokemon-hub__inventory">

@@ -1,4 +1,9 @@
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .pokemon-hub__inventory {
     display: flex;
     flex-direction: row;

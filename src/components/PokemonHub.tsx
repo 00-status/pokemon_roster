@@ -36,6 +36,7 @@ export const PokemonHub = () => {
     //          Hide overflow of inventory
     //          Change button to be onClick and hover
     //          Align titles
+    //          Change Remove button to be an "X" button
     
     return <div>
         <div className="pokemon-hub__inventory">

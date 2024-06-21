@@ -11,8 +11,12 @@ export const RosterItem = (props: Props) => {
     return <div className="roster-item">
         <img className="roster-item__image" src={pokemon.sprite} alt={pokemon.name} />
         <div className="roster-item__label">
-            {pokemon.name}
-            {pokemon.types.map(typeName => typeName)}
+            <div>
+                {pokemon.name}
+            </div>
+            <div>
+                {pokemon.types.map(typeName => typeName)}
+            </div>
         </div>
         <button onClick={() => onClick(pokemon.name)}>Remove</button>
     </div>;

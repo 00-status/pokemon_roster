@@ -1,7 +1,10 @@
 
 .roster-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 400px;
 }
 
 .roster-item__image {
@@ -9,5 +12,5 @@
 }
 
 .roster-item__label {
-    align-self: center;
+    align-self: flex-start;
 }

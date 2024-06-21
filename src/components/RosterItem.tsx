@@ -17,6 +17,12 @@ export const RosterItem = (props: Props) => {
             <div>
                 {pokemon.types.map(typeName => typeName)}
             </div>
+            <div>
+                {pokemon.height / 10}m.
+            </div>
+            <div>
+                {pokemon.weight / 10}kg.
+            </div>
         </div>
         <button onClick={() => onClick(pokemon.name)}>Remove</button>
     </div>;

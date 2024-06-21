@@ -29,22 +29,24 @@ export const PokemonHub = () => {
     };
 
     // TODO:
-    //      Details section: Display height, weight, name, types, abilities
     //      Fetch Pokemon by generation
+    //      Change Add button to be a click + hover.
     //      Styling
-    //          align Roster and inventory heights
+    //          Add Roster min-width so page doesn't jump around.
+    //          Choose colour scheme
+    //              Inventory hover styling
+    //              RosterItem background colour
+    //          Add font styles
     //          Hide overflow of inventory
     //          Change button to be onClick and hover
-    //          Align titles
-    //          Change Remove button to be an "X" button
+    //          Change "Remove" button to be an "X" button
+    //          Add gap between roster items
+    //          Bold pokemon names
     
     return <div>
         <div className="pokemon-hub__inventory">
             <PokemonRoster rosterPokemons={rosterPokemons} removeFromRoster={removeFromRoster} />
             <PokemonInventory pokemons={pokemons} addToRoster={addToRoster} />
-        </div>
-        <div>
-            Details
         </div>
     </div>;
 };

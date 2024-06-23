@@ -9,9 +9,8 @@ type Props = {
 export const InventoryItem = (props: Props) => {
     const { pokemon, onClick } = props;
 
-    return <div className='inventory-item'>
-        <img className='inventory-item__image' src={pokemon.sprite} alt={pokemon.name} />
+    return <div className='inventory-item' onClick={() => onClick(pokemon)}>
         <div className='inventory-item__label' >{pokemon.name}</div>
-        <button onClick={() => onClick(pokemon)}>Add</button>
+        <img className='inventory-item__image' src={pokemon.sprite} alt={pokemon.name} />
     </div>;
 };

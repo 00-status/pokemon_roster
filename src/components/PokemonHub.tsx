@@ -30,6 +30,7 @@ export const PokemonHub = () => {
 
     // TODO:
     //      Fetch Pokemon by generation
+    //      Add loading spinner
     //      Change Add button to be a click + hover.
     //      Styling
     //          Add Roster min-width so page doesn't jump around.
@@ -42,6 +43,12 @@ export const PokemonHub = () => {
     //          Change "Remove" button to be an "X" button
     //          Add gap between roster items
     //          Bold pokemon names
+
+    // --gunmetal: #253031ff;
+    // --jonquil: #ffcb05ff;
+    // --ghost-white: #fffaffff;
+    // --cerulean: #2978a0ff;
+    // --columbia-blue: #c6e0ffff;
     
     return <div>
         <div className="pokemon-hub__inventory">

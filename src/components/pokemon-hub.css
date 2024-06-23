@@ -4,6 +4,14 @@ ul {
     padding: 0;
 }
 
+html body {
+    background-color: #c6e0ffff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .pokemon-hub__inventory {
     display: flex;
     flex-direction: row;

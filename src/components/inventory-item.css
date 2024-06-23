@@ -2,6 +2,16 @@
 .inventory-item {
     display: flex;
     flex-direction: column;
+
+    padding: 4px;
+    border-radius: 6px;
+    background-color: #2978a0ff;
+    transition: all .1s ease-in-out;
+}
+
+.inventory-item:hover {
+    background-color: #FFCB05;
+    transform: scale(1.10);
 }
 
 .inventory-item__image {
@@ -9,5 +19,10 @@
 }
 
 .inventory-item__label {
+    border-radius: 40%;
+    border: 1px solid #253031ff;
+    padding: 4px;
+
+    background-color: #fffaffff;
     align-self: center;
 }

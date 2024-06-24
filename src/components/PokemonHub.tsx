@@ -31,7 +31,6 @@ export const PokemonHub = () => {
     // TODO:
     //      Fetch Pokemon by generation
     //      Add loading spinner
-    //      Change Add button to be a click + hover.
     //      Styling
     //          Add Roster min-width so page doesn't jump around.
     //          Choose colour scheme

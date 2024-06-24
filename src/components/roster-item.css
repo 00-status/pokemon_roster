@@ -2,15 +2,60 @@
 .roster-item {
     display: flex;
     flex-direction: row;
+
+    margin: 8px;
+    width: 400px;
+    border-radius: 8px;
+
+    background-color: #8EC6E2;
+}
+
+.roster-item__contents {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
-    width: 400px;
+    margin: 8px;
+    width: 100%;
 }
 
 .roster-item__image {
+    padding: 8px;
     width: 100px;
 }
 
 .roster-item__label {
-    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: bold;
+}
+
+.roster-item__pill {
+    padding: 4px;
+
+    background-color: #fffaffff;
+    border: 1px solid #253031ff;
+    border-radius: 40%;
+}
+
+.roster-item__button {
+    height: 48px;
+    width: 48px;
+
+    align-self: center;
+
+    background-color: #F33C44;
+    border-radius: 8px;
+    border: 1px solid #253031ff;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.roster-item__button:hover {
+    background-color: #FD7D81;
+    border: none;
 }

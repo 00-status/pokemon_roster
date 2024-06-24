@@ -28,20 +28,7 @@ export const PokemonHub = () => {
         setRosterPokemons(rosterPokemonsClone);
     };
 
-    // TODO:
-    //      Fetch Pokemon by generation
-    //      Add loading spinner
-    //      Styling
-    //          Add Roster min-width so page doesn't jump around.
-    //          Choose colour scheme
-    //              Inventory hover styling
-    //              RosterItem background colour
-    //          Add font styles
-    //          Hide overflow of inventory
-    //          Change button to be onClick and hover
-    //          Change "Remove" button to be an "X" button
-    //          Add gap between roster items
-    //          Bold pokemon names
+    // TODO: Add loading spinner
 
     // --gunmetal: #253031ff;
     // --jonquil: #ffcb05ff;

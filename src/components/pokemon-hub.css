@@ -1,3 +1,6 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 ul {
     margin: 0;
@@ -8,8 +11,9 @@ html body {
     background-color: #c6e0ffff;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+h1, h2 {
+    font-family: "Merriweather", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 8px 0;
 }
 
 .pokemon-hub__inventory {

@@ -1,3 +1,4 @@
+import './pokemon-roster.css';
 import { Pokemon } from "../fetchDetailedPokemonHook";
 import { RosterItem } from "./RosterItem";
 
@@ -9,7 +10,7 @@ type Props = {
 export const PokemonRoster = (props: Props) => {
     const {rosterPokemons, removeFromRoster} = props;
 
-    return <div>
+    return <div className="pokemon-roster">
         <h2>Roster</h2>
         <ul>
             {rosterPokemons.map((pokemon) =>

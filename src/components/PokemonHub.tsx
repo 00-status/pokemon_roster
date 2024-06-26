@@ -28,14 +28,7 @@ export const PokemonHub = () => {
         setRosterPokemons(rosterPokemonsClone);
     };
 
-    // TODO: Add loading spinner
-
-    // --gunmetal: #253031ff;
-    // --jonquil: #ffcb05ff;
-    // --ghost-white: #fffaffff;
-    // --cerulean: #2978a0ff;
-    // --columbia-blue: #c6e0ffff;
-    
+    // TODO: Allow duplicate pokemon
     return <div>
         <div className="pokemon-hub__inventory">
             <PokemonRoster rosterPokemons={rosterPokemons} removeFromRoster={removeFromRoster} />
